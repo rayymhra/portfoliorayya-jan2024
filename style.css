@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif ;
+}
+
+body {
+    /* background: #342936; */
+    color: #434e51;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    /* background: #b6bad6; */
+    display: flex;
+    /* memberikan jarak, karna saat diberikan flex jadi nyatu gitu*/
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    position: relative;
+    color: #434e51;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* animasi awal page dibuka */
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #ececec;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+/* NAVIGATION BAR */
+.navbar a {
+    font-size: 18px;
+    color: #d7ddc7;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #8d7c66;
+}
+
+/* HOME */
+.home {
+    position: relative;
+    display: flex;
+    background: url('assets/leone-venter-VieM9BdZKFo-unsplash.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* animasi awal page dibuka */
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #ececec;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #8d7c66;
+}
+
+/* animasi awal page dibuka */
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #ececec;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+/* animasi awal page dibuka */
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #ececec;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.home-content .bttn-box {
+    position: relative;
+    display: flex;
+    /* memberikan jarak diantara 2 button */
+    justify-content: space-between;
+
+    width: 345px;
+    height: 50px;
+}
+
+/* animasi awal page dibuka */
+.home-content .bttn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #ececec;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
+/* BUTTON */
+.bttn-box a {
+    position: relative;
+    display: inline-flex;
+
+    /* center */
+    justify-content: center;
+    align-items: center;
+
+    /* ukuran button */
+    width: 150px;
+    height: 100%;
+
+    background: #8d7c66;
+
+    /* garis button */
+    border: 2px solid #8d7c66;
+    /* lengkungan garis */
+    border-radius: 8px;
+
+    /* teks didalem button */
+    font-size: 19px;
+    color: #ececec;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    z-index: 1;
+
+    /* sembunyiin yg keluar garis */
+    overflow: hidden;
+
+    /* animation, transition before text chnged when hover */
+    transition: .5s;
+}
+
+.bttn-box a:hover {
+    color:#8d7c66
+}
+
+.bttn-box a:nth-child(2) {
+    background: transparent;
+    color: #8d7c66;
+}
+
+.bttn-box a:nth-child(2)::before{
+    background: #8d7c66;
+}
+
+.bttn-box a:nth-child(2):hover {
+    color: #ececec;
+}
+
+.bttn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ececec;
+    z-index: -1;
+
+    /* animation */
+    transition: .5s;
+}
+
+.bttn-box a:hover::before {
+    width: 100%;
+}
+
+.contact {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between
+}
+
+.contact a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #8d7c66;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #8d7c66;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+/* animasi awal page dibuka */
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #ececec;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+
+.contact a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .5s;
+    background: #8d7c66;
+}
+
+.contact a:hover{
+    color: #ececec;
+}
+
+.contact a:hover::before {
+    width: 100%;
+    height: 100%;
+
+    background: #8d7c66;
+    /* z-index: -1; */
+}
+
+.home-imgHover {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    
+    right: 30px;
+    width: 500px;
+    height: 80%;
+    background: #ececec;
+    opacity: 50%;
+    border: 3px solid #8d7c66;
+    border-radius: 10%;
+    transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    pointer-events: none;
+
+    padding: 40px;
+}
+
+.home-imgHover:hover {
+    background: #ececec;
+    opacity: 80%;
+    border: 3px solid #8d7c66;
+    border-radius: 15%;
+}
+
+/* animasi awal page dibuka */
+/* .home-imgHover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120%;
+    height: 100%;
+    background: #ececec;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 100;
+} */
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes manipActiveHover {
+    100% {
+        pointer-events: auto;
+    }
+}
+
+/* HOME IMG HOVER CONTENT */
+
+.home-imgHover h2 {
+    position: relative;
+
+    left: 250px;
+    color: #8d7c66;
+}
+
+.home-imgHover ul li a {
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #434e51;
+    font-weight: 600;
+}
+
+.home-imgHover p {
+    margin-bottom: 10px;
+    color: #8d7c66;
+}
